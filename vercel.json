@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "buildCommand": "npm ci && npm run build",
+  "installCommand": "npm ci",
+  "framework": "nextjs",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_TELEMETRY_DISABLED": "1",
+    "NPM_FLAGS": "--prefer-offline --no-audit"
+  },
+  "packageManager": "npm",
+  "build": {
+    "env": {
+      "NODE_OPTIONS": "--max_old_space_size=4096"
+    }
+  }
+} 

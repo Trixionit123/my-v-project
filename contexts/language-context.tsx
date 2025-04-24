@@ -4,6 +4,10 @@ import { createContext, useContext, useState, useEffect, type ReactNode } from "
 
 type Language = "en" | "ru"
 
+type Translations = {
+  [K in string]: string
+}
+
 type LanguageContextType = {
   language: Language
   setLanguage: (lang: Language) => void
@@ -13,7 +17,7 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 // English translations
-const enTranslations = {
+const enTranslations: Translations = {
   // Navbar
   "nav.home": "Home",
   "nav.about": "About",
@@ -97,7 +101,7 @@ const enTranslations = {
 }
 
 // Russian translations
-const ruTranslations = {
+const ruTranslations: Translations = {
   // Navbar
   "nav.home": "Главная",
   "nav.about": "Обо мне",
@@ -180,7 +184,7 @@ const ruTranslations = {
   "footer.rights": "Все права защищены.",
 }
 
-const translations = {
+const translations: Record<Language, Translations> = {
   en: enTranslations,
   ru: ruTranslations,
 }

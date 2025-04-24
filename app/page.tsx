@@ -10,6 +10,12 @@ import Footer from "@/components/footer"
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800">
+      <div className="container mx-auto px-4 py-8 text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
+        <p className="text-xl mb-8">Site is under construction</p>
+        <p className="text-lg">Coming soon...</p>
+      </div>
+
       <Hero />
 
       <div className="container mx-auto px-4 py-8 flex justify-center">
